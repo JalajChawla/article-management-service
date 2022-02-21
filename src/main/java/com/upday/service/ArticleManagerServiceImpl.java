@@ -6,7 +6,6 @@ import com.upday.pagination.PageRequest;
 import com.upday.repo.ArticleRepository;
 import com.upday.service.dto.ArticleDTO;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -19,13 +18,11 @@ import java.util.*;
 @Slf4j
 public class ArticleManagerServiceImpl implements ArticleManagerService {
     private final ArticleRepository articleRepository;
-    @Autowired
-    private ArticleDAL articleDal;
+    private final ArticleDAL articleDal;
 
-
-    public ArticleManagerServiceImpl(ArticleRepository articleRepository) {
+    public ArticleManagerServiceImpl(ArticleRepository articleRepository,ArticleDAL articleDal) {
         this.articleRepository = articleRepository;
-
+        this.articleDal=articleDal;
     }
 
     @Override
