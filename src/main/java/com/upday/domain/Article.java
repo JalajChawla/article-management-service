@@ -9,6 +9,7 @@ import org.springframework.data.annotation.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author jalajchawla
@@ -28,6 +29,7 @@ public class Article extends AbstractAuditingEntity implements Serializable {
     private String text;
     @Size(max = 100)
     private String shortDesc;
+    @Indexed
     @Size(max = 150)
-    private String keyword;
+    private List<String> keywords;
 }

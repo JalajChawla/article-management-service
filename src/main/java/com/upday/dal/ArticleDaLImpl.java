@@ -40,7 +40,7 @@ public class ArticleDaLImpl implements ArticleDAL{
         }
 
         if (Objects.nonNull(keyword)) {
-            query.addCriteria(Criteria.where("keyword").regex( keyword, "i"));
+            query.addCriteria(Criteria.where("keywords").regex( keyword, "i"));
         }
         log.info("Final query is : {}", query);
         return mongoTemplate.find(query, Article.class);
@@ -56,7 +56,6 @@ public class ArticleDaLImpl implements ArticleDAL{
     @Override
     public Optional<Article> findArticleByAuthorAndHeader(String authorId, String header) {
         Query query = new Query();
-        Article article = null;
         query.addCriteria(new Criteria().andOperator(Criteria.where("created_by").is(authorId),
                 Criteria.where("header").is(header)));
         List<Article> articleList = mongoTemplate.find(query, Article.class);

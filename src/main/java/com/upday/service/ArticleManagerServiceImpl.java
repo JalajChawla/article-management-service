@@ -54,7 +54,7 @@ public class ArticleManagerServiceImpl implements ArticleManagerService {
             article.setHeader(articleDTO.getHeader());
             article.setText(articleDTO.getText());
             article.setShortDesc(articleDTO.getShortDesc());
-            article.setKeyword(articleDTO.getKeyword());
+            article.setKeywords(articleDTO.getKeywords());
             article.setCreatedBy(articleDTO.getAuthor());
             article.setLastModifiedDate(Instant.now().toEpochMilli());
             article.setCreatedDate(Instant.now().toEpochMilli());
@@ -76,7 +76,7 @@ public class ArticleManagerServiceImpl implements ArticleManagerService {
                     article.setHeader(articleDTO.getHeader());
                     article.setText(articleDTO.getText());
                     article.setShortDesc(articleDTO.getShortDesc());
-                    article.setKeyword(articleDTO.getKeyword());
+                    article.setKeywords(articleDTO.getKeywords());
                     article.setCreatedBy(articleDTO.getAuthor());
                     article.setLastModifiedDate(Instant.now().toEpochMilli());
                     articleRepository.save(article);

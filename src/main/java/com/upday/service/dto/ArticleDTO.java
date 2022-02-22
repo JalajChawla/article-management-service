@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 /**
  * @author jalajchawla
@@ -23,5 +24,5 @@ public class ArticleDTO {
     @Size(max = 150)
     private String author;
     @Size(max = 150)
-    private String keyword;
+    private List<String> keywords;
 }
