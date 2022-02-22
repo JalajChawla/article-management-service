@@ -32,7 +32,7 @@ POST localhost:8080/article
     "text":"Test Text",
     "shortDesc":"Test ShortDesc",
     "author":"Test Author",
-    "keyword":["test Keyword"\
+    "keywords":["test Keyword"]
 }]
 ```
 
@@ -44,7 +44,7 @@ PUT localhost:8080/article
     "text":"Test Text1",
     "shortDesc":"Test ShortDesc",
     "author":"Test Author",
-    "keyword":"test Keyword"
+    "keywords":["test Keyword"]
 }
 ```
 
